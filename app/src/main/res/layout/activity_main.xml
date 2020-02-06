@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="实现IPC的四种方式："
+        android:textSize="26sp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:text="intent"
+        android:id="@+id/btn_intent"
+        style="@style/btn_temple" />
+
+    <Button
+        android:text="aidl"
+        android:id="@+id/btn_aidl"
+        style="@style/btn_temple" />
+
+    <Button
+        android:text="broadcast"
+        android:id="@+id/btn_broadcast"
+        style="@style/btn_temple" />
+
+    <Button
+        android:text="contentprovider"
+        android:id="@+id/btn_contentprovider"
+        style="@style/btn_temple" />
+
+</LinearLayout>
