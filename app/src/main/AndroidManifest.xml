@@ -19,14 +19,18 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".AIDLService"
-            android:process=":romate">
+        <service android:name=".AIDLService">
             <intent-filter>
                 <action android:name="com.example.computer_ren.androidipc_demo.AIDLService"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
-
         </service>
+
+        <provider
+            android:authorities="com.example.computer_ren.androidipc_demo.StudentProvider"
+            android:name="com.example.computer_ren.androidipc_demo.StudentProvider"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.example.computer_ren.androidipc_demo;
 
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
@@ -48,10 +49,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.btn_aidl:
+
                 break;
             case R.id.btn_broadcast:
+                Intent intent1 = new Intent();
+                intent1.setAction("com.example.computer_ren.otherapplication.BroadCast");
+                intent1.setPackage("com.example.computer_ren.otherapplication");
+                intent1.putExtra("data","你好，我是服务器");
+                sendBroadcast(intent1);
                 break;
             case R.id.btn_contentprovider:
+                Intent intentContentProvider = new Intent();
+                intentContentProvider.setClassName("com.example.computer_ren.otherapplication",
+                        "com.example.computer_ren.otherapplication.ContentProviderActivitty");
+                startActivity(intentContentProvider);
                 break;
         }
     }
